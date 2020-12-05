@@ -1,0 +1,142 @@
+$backgroundColor: #ffffff;
+$bodyColor: #333;
+$bodyFont: "Poppins",
+BlinkMacSystemFont,
+"Segoe UI",
+Helvetica,
+Arial,
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol";
+
+body {
+    background: $backgroundColor;
+    color: $bodyColor;
+    font-family: $bodyFont;
+    line-height: 1.5rem;
+}
+
+a:first-of-type {
+    color: red;
+}
+
+ul {
+    margin-bottom: 5rem;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    list-style: none;
+    border-left: 1px solid red;
+    padding: 0;
+    padding-left: 1rem;
+    line-height: 1.75rem;
+
+}
+
+ul li::before {
+    content: "•";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+}
+
+p {
+    margin-left: 4rem;
+    max-width: 80vw;
+    border-left: 1px solid red;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: -1rem;
+}
+
+p:nth-of-type(4),
+p:nth-of-type(7) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+h1,
+h2 {
+
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 5rem;
+}
+
+p:nth-of-type(5) {
+    margin-top: 5rem;
+
+}
+
+h3 {
+    font-size: 1.25rem;
+    float: left;
+    writing-mode: vertical-rl;
+    margin-right: 2rem;
+    margin-top: 3.25rem;
+}
+
+h3:first-of-type {
+    margin-top: .3rem;
+}
+
+h3:nth-of-type(2) {
+    margin-top: 4rem;
+}
+
+h3#yazilar,
+h3#i̇leti̇şi̇m {
+    margin-top: 0;
+}
+
+h4 {
+    margin-top: 2rem;
+    font-weight: 400;
+    text-align: right;
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        margin: 0 10rem;
+    }
+
+    img {
+        margin-top: 10rem;
+        width: 250px;
+        height: 250px;
+    }
+
+    h3 {
+        writing-mode: horizontal-tb;
+        max-width: 7.5rem;
+        margin-right: 3rem;
+    }
+
+    p {
+        margin-left: 9.5rem;
+    }
+
+    ul {
+        margin-left: 9.5rem;
+    }
+}

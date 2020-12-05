@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "tr-TR" }}">
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
+</head>
+
+<style>
+    .dark {
+        color: #fff;
+        background-color: #333;
+    }
+
+</style>
+
+<body>
+
+    <dark-mode-toggle>
+        <style>
+            label::before {
+                content: "";
+                display: inline-block;
+                background-size: var(--dark-mode-toggle-icon-size, 1rem);
+                background-repeat: no-repeat;
+                height: var(--dark-mode-toggle-icon-size, 2rem);
+                width: var(--dark-mode-toggle-icon-size, 2rem);
+                vertical-align: middle;
+            }
+
+            [part=lightLabel]::before {
+                background-image: var(--dark-mode-toggle-light-icon, url("https://cdn.onlinewebfonts.com/svg/img_542346.png"))
+            }
+
+            [part=darkLabel]::before {
+                filter: var(--dark-mode-toggle-icon-filter, none);
+                background-image: var(--dark-mode-toggle-dark-icon, url(https://cdn.onlinewebfonts.com/svg/img_542346.png"))
+            }
+
+        </style>
+    </dark-mode-toggle>
+
+    <img src="https://cerensimsek.com/ceren_simsek.jpg" alt="" />
+
+    {{ content }}
+
+    <script>
+        window.addEventListener('colorschemechange', (e) => {
+            document.body.classList.toggle('dark', e.target.mode === 'dark');
+        });
+
+    </script>
+</body>
+
+</html>
